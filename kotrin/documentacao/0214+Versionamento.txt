@@ -1,0 +1,3 @@
+https://www.linkapi.solutions/blog/tecnico/versionamento-apis-restful/
+https://docs.microsoft.com/en-us/dotnet/architecture/microservices/architect-microservice-container-applications/maintain-microservice-apis
+https://www.infoq.com/news/2016/07/web-api-versioning/

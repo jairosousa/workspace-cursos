@@ -1,0 +1,3 @@
+http://restcookbook.com/Basics/hateoas/
+https://nordicapis.com/tools-to-make-hateoas-compliance-easier/
+http://www.semeru.com.br/blog/en/

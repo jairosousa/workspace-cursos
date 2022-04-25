@@ -1,0 +1,27 @@
+#Java
+sudo add-apt-repository ppa:linuxuprising/java // adicionar diretorio
+sudo apt-get update
+sudo apt install -y oracle-java17-installer
+
+java -version
+javac -version
+
+
+
+#maven
+sudo apt-get install maven
+mvn -v
+
+# Kotlin
+snap install --classic kotlin
+kotlinc
+:quit
+
+# Intellij
+## pesquisar no snapp
+snap find "intellij" 
+## instalar
+snap install intellij-ideacommunity --classic
+
+# MySQL
+

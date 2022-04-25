@@ -1,0 +1,4 @@
+https://www.crummy.com/writing/speaking/2008-QCon/act3.html
+https://www.boaglio.com/index.php/2016/11/03/modelo-de-maturidade-de-richardson-os-passos-para-a-gloria-do-rest/
+https://dzone.com/refcardz/rest-foundations-restful?chapter=3
+https://martinfowler.com/articles/richardsonMaturityModel.html

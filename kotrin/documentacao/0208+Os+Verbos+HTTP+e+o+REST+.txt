@@ -1,0 +1,3 @@
+https://www.tutorialspoint.com/http/http_methods.htm
+https://www.restapitutorial.com/lessons/httpmethods.html
+https://dzone.com/refcardz/rest-foundations-restful?chapter=4
