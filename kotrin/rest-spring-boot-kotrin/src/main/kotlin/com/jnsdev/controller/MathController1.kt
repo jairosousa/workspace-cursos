@@ -1,4 +1,4 @@
-package com.jnsdev
+package com.jnsdev.controller
 
 import com.jnsdev.exception.UnsupportedMathOperationException
 import org.springframework.web.bind.annotation.PathVariable
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController
  * @Autor Jairo Nascimento
  * @Created 25/04/2022 - 11:47
  */
-@RestController
-class MathController {
+//@RestController
+class MathController1 {
 
     @RequestMapping(value = ["/sum/{numberOne}/{numberTwo}"])
     fun sum(
