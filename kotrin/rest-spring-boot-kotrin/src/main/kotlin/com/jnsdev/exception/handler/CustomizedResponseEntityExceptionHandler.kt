@@ -1,5 +1,7 @@
-package com.jnsdev.exception
+package com.jnsdev.exception.handler
 
+import com.jnsdev.exception.ExceptionResponse
+import com.jnsdev.exception.ResourceNotFoundException
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ControllerAdvice
@@ -29,14 +31,14 @@ class CustomizedResponseEntityExceptionHandler : ResponseEntityExceptionHandler(
         return ResponseEntity<ExceptionResponse>(exceptioResponse, HttpStatus.INTERNAL_SERVER_ERROR)
     }
 
-    @ExceptionHandler(UnsupportedMathOperationException::class)
-    fun handleBadRequestExceptions(ex: Exception, request: WebRequest) :
+    @ExceptionHandler(ResourceNotFoundException::class)
+    fun handleResourceNotFoundException(ex: Exception, request: WebRequest) :
             ResponseEntity<ExceptionResponse> {
         val exceptioResponse = ExceptionResponse(
             Date(),
             ex.message,
             request.getDescription(false)
         )
-        return ResponseEntity<ExceptionResponse>(exceptioResponse, HttpStatus.BAD_REQUEST)
+        return ResponseEntity<ExceptionResponse>(exceptioResponse, HttpStatus.NOT_FOUND)
     }
 }
