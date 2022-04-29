@@ -1,8 +1,5 @@
 package com.jnsdev.controller
 
-import com.jnsdev.converters.NumberConvert
-import com.jnsdev.exception.UnsupportedMathOperationException
-import com.jnsdev.math.SimpleMath
 import com.jnsdev.model.Person
 import com.jnsdev.services.PersonServices
 import org.springframework.beans.factory.annotation.Autowired
@@ -23,11 +20,22 @@ class PersonController {
     @Autowired
     private lateinit var service: PersonServices
 
-    @RequestMapping(value = ["/{id}"], method = [RequestMethod.GET],
-    produces = [MediaType.APPLICATION_JSON_VALUE])
-    fun sum(
-        @PathVariable(value = "id") id: Long): Person {
+    @RequestMapping(
+        value = ["/{id}"], method = [RequestMethod.GET],
+        produces = [MediaType.APPLICATION_JSON_VALUE]
+    )
+    fun findById(
+        @PathVariable(value = "id") id: Long
+    ): Person {
         return service.findById(id)
+    }
+
+    @RequestMapping(
+        method = [RequestMethod.GET],
+        produces = [MediaType.APPLICATION_JSON_VALUE]
+    )
+    fun findAll(): List<Person> {
+        return service.findAll()
     }
 
 }
