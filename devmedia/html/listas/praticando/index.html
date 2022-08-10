@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Praticando</title>
+      <style>
+            code {
+                  background-color: rgb(240, 238, 238);
+                  font-size: 1rem;
+                  color: rgb(75, 75, 75);
+                  font-weight: bold;
+                  padding: 0.2rem;
+                  border-radius: 0.2rem;
+            }
+
+            p#item {
+                  margin-left: 1.5rem;
+            }
+
+            p#item1 {
+                  margin-left: 3.0rem;
+            }
+
+            p#item2 {
+                  margin-left: 4.5rem;
+            }
+            p#item3 {
+                  margin-left: 6.0rem;
+            }
+            p#item4 {
+                  margin-left: 7.5rem;
+            }
+      </style>
+</head>
+
+<body>
+
+      <section>
+            <h1>Praticando</h1>
+            <p>Agora que já sabemos como criar listas, vamos construir um exemplo e nele vamos mostrar dois mapas de estudos, um para back-end e outro para front-end.</p>
+            <div>
+                  
+                  <p>&lt;!DOCTYPE html&gt;</p>
+                        <p>&lt;html&gt;</p>
+                        <p>&lt;head&gt;</p>
+                            <p id="item">&lt;title&gt;Mapa de estudos&lt;/title&gt;</p>
+                        <p>&lt;/head&gt;</p>
+                        <p>&lt;body&gt;</p>
+                        <p>&lt;h1&gt;Mapa de Estudos&lt;/h1&gt;</p>
+                        <p>&lt;h2&gt;Comece sua carreira como desenvolvedor back-end ou front-end. Você decide!&lt;/h2&gt;</p>
+                        <p>&lt;ul type="square"&gt;</p>
+                              <p id="item">&lt;li&gt;</p>
+                                    <p id="item1">&lt;h3&gt;Front-End&lt;/h3&gt;</p>
+                                    <p id="item1">&lt;ol type="i"&gt;</p>
+                                          <p id="item2">&lt;li&gt;</p>
+                                                <p id="item3">&lt;h3&gt;HTML&lt;/h3&gt;</p>
+                                                <p id="item3">&lt;ol&gt;</p>
+                                                      <p id="item4">&lt;li&gt;Introdução&lt;/li&gt;</p>
+                                                      <p id="item4">&lt;li&gt;Tag p&lt;/li&gt;</p>
+                                                      <p id="item4">&lt;li&gt;Tag pre&lt;/li&gt;</p>
+                                                <p id="item3">&lt;/ol&gt;</p>
+                                          <p id="item2">&lt;/li&gt;</p>
+                                          <p id="item2">&lt;li&gt;</p>
+                                                <p id="item3">&lt;h3&gt;CSS&lt;/h3&gt;</p>
+                                                <p id="item3">&lt;ol&gt;</p>
+                                                      <p id="item4">&lt;li&gt;Introdução&lt;/li&gt;</p>
+                                                      <p id="item4">&lt;li&gt;Seletores&lt;/li&gt;</p>
+                                                      <p id="item4">&lt;li&gt;Box Model&lt;/li&gt;</p>
+                                                <p id="item3">&lt;/ol&gt;</p>
+                                          <p id="item2">&lt;/li&gt;</p>
+                                    <p id="item1">&lt;/ol&gt;
+                              <p id="item">&lt;/li&gt;</p>
+                              <p id="item">&lt;li&gt;</p>
+                                    <p id="item1">&lt;h3&gt;Back-End&lt;/h3&gt;</p>
+                                    <p id="item1">&lt;ol type="i"&gt;</p>
+                                          <p id="item2">&lt;li&gt;</p>
+                                                <p id="item3">&lt;h3&gt;Lógica de programação&lt;/h3&gt;</p>
+                                                <p id="item3">&lt;ol&gt;</p>
+                                                      <p id="item4">&lt;li&gt;Algoritmos&lt;/li&gt;</p>  
+                                                      <p id="item4">&lt;li&gt;Tipos de dados&lt;/li&gt;</p>
+                                                      <p id="item4">&lt;li&gt;Operadores&lt;/li&gt;</p>
+                                                <p id="item3">&lt;/ol&gt;
+                                          <p id="item2">&lt;/li&gt;</p>
+                                          <p id="item2">&lt;li&gt;</p>
+                                                <p id="item3">&lt;h3&gt;Estrutura de dados&lt;/h3&gt;</p>
+                                                <p id="item3">&lt;ol&gt;</p>    
+                                                      <p id="item4">&lt;li&gt;Listas&lt;/li&gt;</p>
+                                                      <p id="item4">&lt;li&gt;Filas&lt;/li&gt;</p>
+                                                      <p id="item4">&lt;li&gt;Pilhas&lt;/li&gt;</p>
+                                                <p id="item3">&lt;/ol&gt;
+                                          <p id="item2">&lt;/li&gt;
+                                    <p id="item1">&lt;/ol&gt;
+                              <p id="item">&lt;/li&gt;
+                        <p>&lt;/ul&gt;</p>
+                        <p>&lt;/body&gt;</p>
+                        <p>&lt;/html&gt;</p>
+
+            </div>
+            <div>
+                  <h2>Entendendo o código do exemplo</h2>
+                  <p>
+                        Para criarmos o nosso exemplo de mapa de estudos, precisamos entender a estrutura da nossa lista:
+                  </p>
+
+                  <ul type="circle">
+                        <li>Lista não ordenada (categorias);</li>
+                        <li>Lista ordenada de algarismos romanos (tecnologias);</li>
+                        <li>Lista ordenada de números naturais (tópicos).</li>
+                  </ul>
+
+                  <h1>Mapa de Estudos</h1>
+                  <h2>Comece sua carreira como desenvolvedor back-end ou front-end. Você decide!</h2>
+                        <ul type="square">
+                        <li>
+                              <h3>Front-End</h3>
+                              <ol type="i">
+                                    <li>
+                                    <h3>HTML</h3>
+                                    <ol>
+                                          <li>Introdução</li>
+                                          <li>Tag p</li>
+                                          <li>Tag pre</li>
+                                    </ol>
+                                    </li>
+                                    <li>
+                                    <h3>CSS</h3>
+                                    <ol>
+                                          <li>Introdução</li>
+                                          <li>Seletores</li>
+                                          <li>Box Model</li>
+                                    </ol>
+                                    </li>
+                              </ol>
+                        </li>
+                        <li>
+                              <h3>Back-End</h3>
+                              <ol type="i">
+                                    <li>
+                                    <h3>Lógica de programação</h3>
+                                    <ol>
+                                          <li>Algoritmos</li>
+                                          <li>Tipos de dados</li>
+                                          <li>Operadores</li>
+                                    </ol>
+                                    </li>
+                                    <li>
+                                    <h3>Estrutura de dados</h3>
+                                    <ol>
+                                          <li>Listas</li>
+                                          <li>Filas</li>
+                                          <li>Pilhas</li>
+                                    </ol>
+                                    </li>
+                              </ol>
+                        </li>
+                        </ul>
+            </div>
+            
+
+      </section>
+
+</body>
+
+</html>

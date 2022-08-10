@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Listas Definição</title>
+      <style>
+            code {
+                  background-color: rgb(240, 238, 238);
+                  font-size: 1rem;
+                  color: rgb(75, 75, 75);
+                  font-weight: bold;
+                  padding: 0.2rem;
+                  border-radius: 0.2rem;
+            }
+
+            p#item {
+                  margin-left: 1.5rem;
+            }
+
+            p#subitem {
+                  margin-left: 3.0rem;
+            }
+
+            p#subsubitem {
+                  margin-left: 4.5rem;
+            }
+      </style>
+</head>
+
+<body>
+
+      <section>
+            <h1>Lista de definição</h1>
+            <p>O objetivo da lista de definição é exibir termos e suas respectivas definições.</p>
+            <div>
+                  <h2>Sintaxe</h2>
+                  <p>
+                        A estrutura de uma lista de definição é composta pelas seguintes tags:
+                  <ul type="circle">
+                        <li><code>&lt;dl&gt; &lt;/dl&gt;</code> - abertura e fechamento de uma lista;</li>
+                        <li><code>&lt;dt&gt; &lt;/dt&gt;</code> - abertura e fechamento de um termo;</li>
+                        <li><code>&lt;dd&gt; &lt;/dd&gt;</code> - abertura e fechamento de uma descrição;</li>
+                  </ul>
+
+                  </p>
+                  <p>
+                        Podemos utilizar tags HTML na estrutura de uma lista de definição, como vimos nas listas
+                        anteriores.
+                  </p>
+                  <p>
+                        Um item da lista de definição é formado por um termo e uma ou mais definições
+                  </p>
+
+            </div>
+
+            <div>
+                  <h2>Tags de Utilização</h2>
+                  <p>&lt;dl&gt; - Abertura da lista.</p>
+                  <p>&lt;dt&gt; - Abertura de um termo.</p>
+                  <p>&lt;/dt&gt; - Fechamento de um termo.</p>
+                  <p>&lt;dd&gt; - Abertura de uma descrição.</p>
+                  <p>&lt;/dd&gt; - Fechamento de uma descrição.</p>
+                  <p>&lt;/dl&gt; - Fechamento da lista.</p>
+
+                  <h3>Lista definição</h3>
+                  <p>&lt;!DOCTYPE html&gt;</p>
+                  <p>&lt;html&gt;</p>
+                  <p>&lt;head&gt;</p>
+                  <p>&lt;title&gt;Lista de Definição&lt;/title&gt;</p>
+                  <p>&lt;/head&gt;</p>
+                  <p>&lt;body&gt;</p>
+                  <p id="item">&lt;dl&gt;</p>
+                  <p id="subitem">&lt;dt&gt;Front-End&lt;/dt&gt;</p>
+                  <p id="subitem">&lt;dd&gt;Toda parte visual de um site, onde o usuário interage
+                        diretamente.&lt;/dd&gt;</p>
+
+                  <p id="subitem">&lt;dt&gt;Back-End&lt;/dt&gt;</p>
+                  <p id="subitem">&lt;dd&gt;Estrutura por trás das aplicações, que suporta todas as ações do
+                        usuário.&lt;/dd&gt;</p>
+                  <p id="item">&lt;/dl&gt;</p>
+                  <p>&lt;/body&gt;</p>
+                  <p>&lt;/html&gt;</p>
+
+                  <h3>No HTML</h3>
+                  <p>
+                  <dl>
+                        <dt>Front-End</dt>
+                        <dd>Toda parte visual de um site, onde o usuário interage diretamente.</dd>
+
+                        <dt>Back-End</dt>
+                        <dd>Estrutura por trás das aplicações, que suporta todas as ações do usuário.</dd>
+                  </dl>
+                  </p>
+
+            </div>
+
+            <div>
+                  <h2>Exemplo Prático</h2>
+                  <p>
+                        Para este exemplo prático vamos nos basear em um dicionário, onde temos um termo seguido de suas
+                        definições.
+                  </p>
+                  <br>
+                  <p>&lt;!DOCTYPE html&gt;</p>
+                  <p>&lt;html&gt;</p>
+                  <p>&lt;head&gt;</p>
+                  <p id="item">&lt;title&gt;Lista de definição em formato dicionário&lt;/title&gt;</p>
+                  <p>&lt;/head&gt;</p>
+                  <p>&lt;body&gt;</p>
+
+                  <p>&lt;dl&gt;</p>
+                  <p id="item">&lt;dt&gt;&lt;h2&gt;Empatia&lt;/h2&gt;&lt;/dt&gt;</p>
+                  <p id="subitem">&lt;dd&gt;&lt;p&gt;Identificação de um sujeito com outro.&lt;/p&gt;&lt;/dd&gt;</p>
+                  <p id="subitem">&lt;dd&gt;&lt;p&gt;Se colocar no lugar de outra pessoa a fim de
+                        entendê-la.&lt;/p&gt;&lt;/dd&gt;</p>
+                  <p id="subitem">&lt;dd&gt;&lt;p&gt;Etimologia (origem da palavra empatia). Do grego empátheia; pelo
+                        inglês empathy.&lt;/p&gt;&lt;/dd&gt;</p>
+                  <p id="subitem">&lt;dd&gt;&lt;a href="https://www.dicio.com.br/empatia/" target="_blank"&gt;ver
+                        mais&lt;/a&gt;&lt;/dd&gt;</p>
+
+                  <p id="item">&lt;dt&gt;&lt;h2&gt;Ética&lt;/h2&gt;&lt;/dt&gt;</p>
+                  <p id="subitem">&lt;dd&gt;&lt;p&gt;Conjunto de regras e preceitos de ordem valorativa e moral de um
+                        indivíduo.&lt;/p&gt;&lt;/dd&gt;</p>
+                  <p id="subitem">&lt;dd&gt;&lt;p&gt;O que é moralmente bom ou mau, certo ou
+                        errado.&lt;/p&gt;&lt;/dd&gt;</p>
+                  <p id="subitem">&lt;dd&gt;&lt;p&gt;Etimologia (origem da palavra ética). Do latim ethica; pelo grego
+                        éthikós.&lt;/p&gt;&lt;/dd&gt;</p>
+                  <p id="subitem">&lt;dd&gt;&lt;a href="https://www.dicio.com.br/etica/" target="_blank"&gt;ver
+                        mais&lt;/a&gt;&lt;/dd&gt;</p>
+
+                  <p>&lt;/dl&gt;</p>
+
+                  <p>&lt;/body&gt;</p>
+                  <p>&lt;/html&gt;</p>
+
+                  <h3>No HTML</h3>
+                  <dl>
+                        <dt>
+                              <h2>Empatia</h2>
+                        </dt>
+                        <dd>
+                              <p>Identificação de um sujeito com outro.</p>
+                        </dd>
+                        <dd>
+                              <p>Se colocar no lugar de outra pessoa a fim de entendê-la.</p>
+                        </dd>
+                        <dd>
+                              <p>Etimologia (origem da palavra empatia). Do grego empátheia; pelo inglês empathy.</p>
+                        </dd>
+                        <dd> <a href="https://www.dicio.com.br/empatia/" target="_blank">ver mais </a> </dd>
+
+                        <dt>
+                              <h2>Ética</h2>
+                        </dt>
+                        <dd>
+                              <p>Conjunto de regras e preceitos de ordem valorativa e moral de um indivíduo.</p>
+                        </dd>
+                        <dd>
+                              <p>O que é moralmente bom ou mau, certo ou errado.</p>
+                        </dd>
+                        <dd>
+                              <p>Etimologia (origem da palavra ética). Do latim ethica; pelo grego éthikós.</p>
+                        </dd>
+                        <dd> <a href="https://www.dicio.com.br/etica/" target="_blank">ver mais </a> </dd>
+                  </dl>
+            </div>
+
+      </section>
+
+</body>
+
+</html>
