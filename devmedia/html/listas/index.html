@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Listas</title>
+</head>
+
+<body>
+
+      <section>
+            <h1>Lista Ordenadas</h1>
+            <p>Como vimos, o objetivo da lista ordenada é indicar uma sequência de itens dentro do documento HTML</p>
+
+            <h2>Sintaxe</h2>
+            <p>
+                  Uma lista ordenada se inicia e se encerra respectivamente através das tags &lt;ol&gt; e &lt;/ol&gt;.
+            </p>
+            <p>
+
+                  Um item da lista se inicia e se encerra respectivamente através das tags &lt;li&gt; e &lt;/li&gt;>.
+            </p>
+            <p>
+
+                  Dentro de um item podemos utilizar qualquer elemento HTML que quisermos como títulos, parágrafos,
+                  imagens e até mesmo outras listas (chamamos de aninhamento).
+            </p>
+
+            <ol>
+                  <li>Item</li>
+                  <li>Item</li>
+                  <li>Item</li>
+            </ol>
+
+            <h2>Atributo de Marcação (type)</h2>
+            <p>
+                  Uma lista ordenada pode ser identificada pelo seu marcador e, por padrão, ele vem definido como
+                  ordenação numérica.
+                  Podemos também alterar o padrão por outros quatro tipos: numerais romanos ou ordenação alfabética e
+                  ambos os casos podem ser usados na forma minúscula
+                  ou maiúscula.
+            </p>
+
+            <h3>Alternando a marcação</h3>
+            <p>&lt;ol type="1"&gt; - Ordenação numérica (padrão)</p>
+            <p>&lt;ol type="a"&gt; - Ordenação alfabetica minuscula</p>
+            <p>&lt;ol type="A"&gt; - Ordenação alfabetica maiuscula</p>
+            <p>&lt;ol type="i"&gt; - Ordenação romanos minuscula</p>
+            <p>&lt;ol type="I"&gt; - Ordenação romanos maiuscula</p>
+
+            <div>
+                  <ol type="I">
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                  </ol>
+            </div>
+
+            <div>
+                  <h2>Ponto de partida (start)</h2>
+                  <p>
+                        Podemos definir um ponto de partida para a classificação dos itens, dessa forma a numeração começará a partir de um número especificado no atributo start.
+                  </p>
+                  
+                  <span>Inicar com 3</span>
+                  <ol start="3">
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                    </ol>
+            </div>
+
+      </section>
+
+</body>
+
+</html>
