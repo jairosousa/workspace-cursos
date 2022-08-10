@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Listas Ordenadas</title>
+      <style>
+            code {
+                  background-color: rgb(240, 238, 238);
+                  font-size: 1rem;
+                  color: rgb(75, 75, 75);
+                  font-weight: bold;
+                  padding: 0.2rem;
+                  border-radius: 0.2rem;
+            }
+
+            p#item {
+                  margin-left: 1.5rem;
+            }
+
+            p#subitem {
+                  margin-left: 3.0rem;
+            }
+
+            p#subsubitem {
+                  margin-left: 4.5rem;
+            }
+      </style>
+</head>
+
+<body>
+
+      <section>
+            <h1>Lista Ordenadas</h1>
+            <p>Como vimos, o objetivo da lista ordenada é indicar uma sequência de itens dentro do documento HTML</p>
+            <div>
+                  <h2>Sintaxe</h2>
+                  <p>
+                        Uma lista ordenada se inicia e se encerra respectivamente através das tags <code>&lt;ol&gt;</code> e
+                        <code>&lt;/ol&gt;</code>.
+                  </p>
+                  <p>
+
+                        Um item da lista se inicia e se encerra respectivamente através das tags <code>&lt;li&gt;</code> e
+                        <code>&lt;/li&gt;</code>.
+                  </p>
+                  <p>
+
+                        Dentro de um item podemos utilizar qualquer elemento HTML que quisermos como títulos,
+                        parágrafos,
+                        imagens e até mesmo outras listas (chamamos de aninhamento).
+                  </p>
+
+                  <h3>Tag de Utilização</h3>
+                  <p>&lt;ol&gt - Abertura da lista. </p>
+                  <p>&lt;li&gt - Abertura de um item.</p>
+                  <p>&lt;/li&gt - Fechamento do item.</p>
+                  <p>&lt;/ol&gt - Fechamento da lista.</p>
+
+                  <ol>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                  </ol>
+            </div>
+            <div>
+                  <h2>Atributo de Marcação (type)</h2>
+                  <p>
+                        Uma lista ordenada pode ser identificada pelo seu marcador e, por padrão, ele vem definido como
+                        ordenação numérica.
+                        Podemos também alterar o padrão por outros quatro tipos: numerais romanos ou ordenação
+                        alfabética e
+                        ambos os casos podem ser usados na forma minúscula
+                        ou maiúscula.
+                  </p>
+
+                  <h3>Tipos de marcação</h3>
+                  <p>
+                        Para alternar o tipo de marcação devemos usar o atributo <code>type</code>
+                  </p>
+                  <p>&lt;ol type="1"&gt; - Ordenação numérica (padrão)</p>
+                  <p>&lt;ol type="a"&gt; - Ordenação alfabetica minuscula</p>
+                  <p>&lt;ol type="A"&gt; - Ordenação alfabetica maiuscula</p>
+                  <p>&lt;ol type="i"&gt; - Ordenação romanos minuscula</p>
+                  <p>&lt;ol type="I"&gt; - Ordenação romanos maiuscula</p>
+
+                  <div>
+                        <ol type="I">
+                              <li>Item</li>
+                              <li>Item</li>
+                              <li>Item</li>
+                        </ol>
+                  </div>
+            </div>
+            <div>
+                  <h2>Ponto de partida (start)</h2>
+                  <p>
+                        Podemos definir um ponto de partida para a classificação dos itens, dessa forma a numeração
+                        começará a partir de um número especificado no atributo start.
+                  </p>
+
+                  <span>Inicar com 3</span>
+
+                  <p>&lt;ol start="3"&gt;</p>
+                  <p id="item">&lt;li&gt;item&lt;/li&gt;</p>
+                  <p id="item">&lt;li&gt;item&lt;/li&gt;</p>
+                  <p id="item">&lt;li&gt;item&lt;/li&gt;</p>
+                  <p>&lt;/ol &gt;</p>
+
+                  <h3>No HTML</h3>
+                  <ol start="3">
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                  </ol>
+            </div>
+            <div>
+                  <h2>Invertendo a Ordem (reversed)</h2>
+                  <p>
+                        Através do atributo <code>reversed</code> informamos que o comportamento da nossa lista será de
+                        maneira reversa.
+                  </p>
+                  <br>
+                  <p>&lt;!DOCTYPE html&gt;</p>
+                  <p>&lt;html&gt;</p>
+                  <p>&lt;head&gt;</p>
+                  <p id="item">&lt;title&gt;Lista ordenada&lt;/title&gt;</p>
+                  <p>&lt;/head&gt;</p>
+                  <p>&lt;body&gt;</p>
+                  <p id="item">&lt;ol reversed&gt;</p>
+                  <p id="subitem">&lt;li&gt;Item&lt;/li&gt;</p>
+                  <p id="subitem">&lt;li&gt;Item&lt;/li&gt;</p>
+                  <p id="subitem">&lt;li&gt;Item&lt;/li&gt;</p>
+                  <p id="item">&lt;/ol&gt;</p>
+                  <p>&lt;/body&gt;</p>
+                  <p>&lt;/html&gt;</p>
+
+                  <h3>No HTML</h3>
+                  <ol reversed>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                  </ol>
+            </div>
+            <div>
+                  <h2>Exemplo Prático</h2>
+                  <p>
+                        A utilização de listas ordenadas pode ser útil, por exemplo, se quisermos definir um cronograma
+                        de estudos (sabemos que existem pré-requisitos entre um assunto e outro).
+                  </p>
+                  <br>
+                  <p>&lt;!DOCTYPE html&gt;</p>
+                  <p>&lt;html&gt;</p>
+                  <p>&lt;head&gt;</p>
+                  <p id="item">&lt;title&gt;Lista Aninhada&lt;/title&gt;</p>
+                  <p>&lt;/head&gt;</p>
+                  <p>&lt;body&gt;</p>
+                  <p>&lt;!-- Cronograma de estudos --&gt;</p>
+                  <p>&lt;ol&gt;</p>
+                  <p id="item">&lt;li&gt;</p>
+                  <p id="subitem"> &lt;h3&gt;FRONT-END&lt;/h3&gt;</p>
+                  <p id="subitem">&lt;ol&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;HTML&lt;/li&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;CSS&lt;/li&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;Bootstrap&lt;/li&gt;</p>
+                  <p id="subitem">&lt;/ol&gt;</p>
+                  <p id="item">&lt;/li&gt;</p>
+                  <p id="item">&lt;li&gt;</p>
+                  <p id="subitem">&lt;h3&gt;BACK-END&lt;/h3&gt;</p>
+                  <p id="subitem">&lt;ol&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;Lógica de programação com PHP&lt;/li&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;Estrutura de dados com PHP&lt;/li&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;Orientação a objetos com PHP&lt;/li&gt;</p>
+                  <p id="subitem">&lt;/ol&gt;</p>
+                  <p id="item">&lt;/li&gt;</p>
+                  <p>&lt;/ol&gt;</p>
+                  <p>&lt;/body&gt;</p>
+                  <p>&lt;/html&gt;</p>
+
+                  <h3>No HTML</h3>
+                  <ol>
+                        <li>
+                              <h3>FRONT-END</h3>
+                              <ol>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Bootstrap</li>
+                              </ol>
+                        </li>
+                        <li>
+                              <h3>BACK-END</h3>
+                              <ol>
+                                    <li>Lógica de programação com PHP</li>
+                                    <li>Estrutura de dados com PHP</li>
+                                    <li>Orientação a objetos com PHP</li>
+                              </ol>
+                        </li>
+                  </ol>
+            </div>
+
+      </section>
+
+</body>
+
+</html>

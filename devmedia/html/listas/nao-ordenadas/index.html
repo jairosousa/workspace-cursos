@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Listas Não Ordenadas</title>
+      <style>
+            code {
+                  background-color: rgb(240, 238, 238);
+                  font-size: 1rem;
+                  color: rgb(75, 75, 75);
+                  font-weight: bold;
+                  padding: 0.2rem;
+                  border-radius: 0.2rem;
+            }
+
+            p#item {
+                  margin-left: 1.5rem;
+            }
+
+            p#subitem {
+                  margin-left: 3.0rem;
+            }
+
+            p#subsubitem {
+                  margin-left: 4.5rem;
+            }
+      </style>
+</head>
+
+<body>
+
+      <section>
+            <h1>Lista Não Ordenadas</h1>
+            <p>O objetivo da lista não ordenada é agrupar itens dentro do documento HTML, sem se preocupar com a
+                  sequência.</p>
+            <div>
+                  <h2>Sintaxe</h2>
+                  <p>
+                        Uma lista não ordenada se inicia e se encerra respectivamente através das tags
+                        <code>&lt;ul&gt;</code> e
+                        <code>&lt;/ul&gt;</code>.
+                  </p>
+                  <p>
+
+                        Um item da lista se inicia e se encerra respectivamente através das tags <code>&lt;li&gt;</code>
+                        e
+                        <code>&lt;/li&gt;</code>.
+                  </p>
+                  <p>
+
+                        Dentro de um item, assim como na lista ordenada, podemos utilizar qualquer elemento HTML que
+                        quisermos (títulos, parágrafos, imagens etc.).
+                  </p>
+
+                  <h3>Tag de Utilização</h3>
+                  <p>&lt;ul&gt - Abertura da lista. </p>
+                  <p>&lt;li&gt - Abertura de um item.</p>
+                  <p>&lt;/li&gt - Fechamento do item.</p>
+                  <p>&lt;/ul&gt - Fechamento da lista.</p>
+
+                  <ul>
+                        <li>Item</li>
+                        <li>Item</li>
+                        <li>Item</li>
+                  </ul>
+            </div>
+            <div>
+                  <h2>Atributo de Marcação (type)</h2>
+                  <p>
+                        A principal diferença entre a lista não ordenada e a lista ordenada está na maneira com que os
+                        itens de cada lista são apresentados.
+                        Podemos também alterar o padrão por outros quatro tipos: numerais romanos ou ordenação
+                  </p>
+                  <p>
+                        A lista <b>não ordenada</b> coloca marcadores antes de cada elemento, enquanto a <b>lista
+                              ordenada</b> enumera os itens.
+                  </p>
+                  <p>
+                        Nas listas não ordenadas também podemos alterar seu marcador padrão, que inicialmente é setado
+                        como <code>disc</code> <b>(círculos pretos)</b>.
+                  </p>
+
+
+                  <h3>Tipos de marcação</h3>
+                  <p>
+                        Para alternar o tipo de marcação devemos usar o atributo <code>type</code>
+                  </p>
+                  <p>&lt;ul type="disc"&gt; - Marcação através de círculos (bolinha cheia <b>padrão</b>)</p>
+                  <p>&lt;ul type="square"&gt; - Marcação através de quadrados</p>
+                  <p>&lt;ul type="circle"&gt; - Marcação através de circuferência (bolinha vazia)</p>
+                  <p>&lt;ul type="none"&gt; - Remove a marcação da lista</p>
+
+                  <div>
+                        <ul>
+                              <h3>Padrão (Bolinhas cheias)</h3>
+                              <li>Item</li>
+                              <li>Item</li>
+                              <li>Item</li>
+                        </ul>
+                        <ul type="square">
+                              <h3>Quadrados</h3>
+                              <li>Item</li>
+                              <li>Item</li>
+                              <li>Item</li>
+                        </ul>
+                        <ul type="circle">
+                              <h3>Circuferência (bolinha vazia)</h3>
+                              <li>Item</li>
+                              <li>Item</li>
+                              <li>Item</li>
+                        </ul>
+                        <ul type="none">
+                              <h3>Sem marcação</h3>
+                              <li>Item</li>
+                              <li>Item</li>
+                              <li>Item</li>
+                        </ul>
+                  </div>
+            </div>
+
+            <div>
+                  <h2>Exemplo Prático</h2>
+                  <p>
+                        A utilização de listas ordenadas pode ser útil, por exemplo, se quisermos definir um cronograma
+                        de estudos (sabemos que existem pré-requisitos entre um assunto e outro).
+                  </p>
+                  <br>
+                  <p>&lt;!DOCTYPE html&gt;</p>
+                  <p>&lt;html&gt;</p>
+                  <p>&lt;head&gt;</p>
+                  <p id="item">&lt;title&gt;Categorizando produtos&lt;/title&gt;</p>
+                  <p>&lt;/head&gt;</p>
+                  <p>&lt;body&gt;</p>
+
+                  <p>&lt;ul&gt;</p>
+                  <p id="item">&lt;li&gt;</p>
+                  <p id="subitem"> &lt;h3&gt;Eletrodomésticos&lt;/h3&gt;</p>
+                  <p id="subitem">&lt;ul type="circle"&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;Torradeiras&lt;/li&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;Fornos e Fogões&lt;/li&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;Geladeiras&lt;/li&gt;</p>
+                  <p id="subitem">&lt;/ul&gt;</p>
+                  <p id="item">&lt;/li&gt;</p>
+                  <p id="item">&lt;li&gt;</p>
+                  <p id="subitem">&lt;h3&gt;Hardware&lt;/h3&gt;</p>
+                  <p id="subitem">&lt;ul type="circle"&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;Placas de vídeo&lt;/li&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;Placas de Som&lt;/li&gt;</p>
+                  <p id="subsubitem">&lt;li&gt;Processadores&lt;/li&gt;</p>
+                  <p id="subitem">&lt;/ul&gt;</p>
+                  <p id="item">&lt;/li&gt;</p>
+                  <p>&lt;/ul&gt;</p>
+                  <p>&lt;/body&gt;</p>
+                  <p>&lt;/html&gt;</p>
+
+                  <h3>No HTML</h3>
+                  <ul>
+                        <li>
+                              <h3>Eletrodomésticos</h3>
+                              <ul type="circle">
+                                    <li>Torradeiras</li>
+                                    <li>Fornos e Fogões</li>
+                                    <li>Geladeiras</li>
+                              </ul>
+                        </li>
+                        <li>
+                              <h3>Hardware</h3>
+                              <ul type="circle">
+                                    <li>Placas de vídeo</li>
+                                    <li>Placas de Som</li>
+                                    <li>Processadores</li>
+                              </ul>
+                        </li>
+                  </ul>
+            </div>
+
+      </section>
+
+</body>
+
+</html>
