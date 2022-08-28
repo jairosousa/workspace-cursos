@@ -5,3 +5,5 @@ WORKDIR /app
 COPY . .
 
 RUN apk add --no-cache python2 g++ make
+
+EXPOSE 3000

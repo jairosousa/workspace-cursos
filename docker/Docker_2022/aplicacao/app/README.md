@@ -131,7 +131,7 @@ Python 2.7.18
 
 ## Comando ENV
 
-* É utilizado quando a sua api tem dependencia com aoutras api como banco dados, URL etc...
+* É utilizado quando a sua api tem dependencia com outras api como banco dados, URL etc...
 
 Exemplo:
 
@@ -140,3 +140,19 @@ ENV API_URL=http://api.outraapi.com
 ```
 Nesse caso api que estamos utilizando não precisa desse recurso.
 
+## Utilizando o EXPOSE
+
+* Utilizado para mapear as porta dos containers com as máquinas root. 
+
+### Atualizando arquivo Dockerfile
+```
+FROM node:12-alpine
+
+WORKDIR /app
+
+COPY . .
+
+RUN apk add --no-cache python2 g++ make
+
+EXPOSE 3000
+```
