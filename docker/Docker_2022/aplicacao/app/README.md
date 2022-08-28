@@ -282,3 +282,60 @@ app                          latest      2183c68204e7   5 hours ago     399MB
 app                          v1.0.0      2183c68204e7   5 hours ago     399MB
 ```
 * Repare aparece as duas imagem mais ela são identicas e tem o mesmo ID.
+
+## Compartilhando imagens
+
+### Upload da maquina para Dcker Hub
+
+* É preciso adicionar tag igual á do ropositorio:
+```
+jnsousa/app
+```
+
+* Pode renomear image existente ou gerar nova com a tag
+
+      * Criar
+```
+> docker build -t jnsousa/app:V1
+```
+
+```
+ docker images
+REPOSITORY                   TAG         IMAGE ID       CREATED         SIZE
+jnsousa/app                  V1          9ddae7737e8a   9 seconds ago   399MB
+app                          latest      2183c68204e7   5 hours ago     399MB
+app                          v1.0.0      2183c68204e7   5 hours ago     399MB
+```
+
+### Docker login
+
+```
+> docker login
+Authenticating with existing credentials...
+Login Succeeded
+
+Logging in with your password grants your terminal complete access to your account.
+For better security, log in with a limited-privilege personal access token. Learn more at https://docs.docker.com/go/access-tokens/
+```
+
+### Upload
+
+```
+> docker push jnsousa/app:V1
+The push refers to repository [docker.io/jnsousa/app]
+219be724e75e: Pushed
+d040ff2a2cec: Pushed
+e3cf86c67120: Pushed
+02e4e117dfdd: Pushed
+4c59d2840fdf: Pushed
+7f30cde3f699: Mounted from library/node
+fe810f5902cc: Mounted from library/node
+dfd8c046c602: Mounted from library/node
+4fc242d58285: Mounted from library/node
+V1: digest: sha256:c314b589692748d9500c14c8eb78bb7baa18ad41c704652d041a11455c4e81ec size: 2207
+```
+
+### Verificar no Docker Hub
+
+![Docjer Hub 1](img/docker_1.png)
+![Docjer Hub 2](img/docker_2.png)
