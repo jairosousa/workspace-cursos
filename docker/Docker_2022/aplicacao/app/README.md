@@ -126,3 +126,17 @@ Python 2.7.18
 ```
 
 * OK instalado
+
+## Configurando Variáveis
+
+## Comando ENV
+
+* É utilizado quando a sua api tem dependencia com aoutras api como banco dados, URL etc...
+
+Exemplo:
+
+```
+ENV API_URL=http://api.outraapi.com
+```
+Nesse caso api que estamos utilizando não precisa desse recurso.
+
