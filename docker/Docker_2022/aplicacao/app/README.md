@@ -77,3 +77,52 @@ COPY . .
 Dockerfile    README.md     package.json  spec          src           yarn.lock
 /app #
 ```
+
+## Utilizando o RUN
+
+* Serve para instalar as dependências da aplicação
+
+### Verificar se Python esta instalado
+
+```
+/app # python --version
+sh: python: not found
+/app #
+```
+* Não esta instalado
+
+### Editar o arquivo Docker file
+
+```
+FROM node:12-alpine
+
+WORKDIR /app
+
+COPY . .
+
+RUN apk add --no-cache python2 g++ make
+``` 
+
+### Montar novamente a imagem
+
+```
+> docker build -t app .
+/ #
+```
+
+### Criar novamente o container no modo interativo e com shell
+
+```
+> docker run -it app sh
+/app #
+```
+
+### Verificar novamente se Python esta instalado
+
+```
+/app # python --version
+Python 2.7.18
+/app #
+```
+
+* OK instalado
