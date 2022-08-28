@@ -210,4 +210,27 @@ CMD [ "node", "src/index.js" ]
 EXPOSE 3000
 ```
 
-* Não vamos criar usuarios nessa aplicação
+* Não vamos criar usuarios nessa aplicação.
+
+## Rodando a sua aplicação
+
+### Construir novamente a imagem
+```
+> docker build -t app .
+```
+
+### Rodar aplicação mapeando para porta 3000
+
+```
+ > docker run -dp 3000:3000 app
+ > 032310a49edb9b9760ad4827f9e6f3fc50bd0c25ac2d8b78191ad444dc868ce8
+```
+-dp -> rodar em background e maper a portas
+
+
+### Verificar no browse se aplicação esta funcionado
+
+http://localhost:3000/
+
+![Todo App](img/todoapp.png)
+
