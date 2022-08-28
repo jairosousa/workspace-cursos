@@ -234,3 +234,27 @@ http://localhost:3000/
 
 ![Todo App](img/todoapp.png)
 
+## Melhorando a performance
+
+* Toda vez que o docker cri uma imagem ele consegue armazenas essas informações no cache.
+
+### Atualizar o dockerfile
+
+```
+FROM node:12-alpine
+
+WORKDIR /app
+
+COPY package.json .
+
+RUN apk add --no-cache python2 g++ make
+
+RUN yarn install --production
+
+COPY . .
+
+CMD [ "node", "src/index.js" ]
+
+EXPOSE 3000
+```
+ Refaça o processo de criação de imagem e rode o container novamente.
