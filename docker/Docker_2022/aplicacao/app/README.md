@@ -180,4 +180,34 @@ RUN yarn install --production
 CMD [ "node", "src/index.js" ]
 
 EXPOSE 3000
+```
 
+## Adicionando um usuário na imagem
+
+### Comando USER
+
+* Todo linux já possui o usuário root.
+* Não é boa pratica executar aplicação com usuario root pois ele possui todas as permissões.
+
+### Atualizando arquivo Dockerfile
+```
+FROM node:12-alpine
+
+WORKDIR /app
+
+RUN addgroup dev && adduser -S -G jairo dev
+
+USER jairo
+
+COPY . .
+
+RUN apk add --no-cache python2 g++ make
+
+RUN yarn install --production
+
+CMD [ "node", "src/index.js" ]
+
+EXPOSE 3000
+```
+
+* Não vamos criar usuarios nessa aplicação
