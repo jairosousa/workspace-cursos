@@ -156,3 +156,28 @@ RUN apk add --no-cache python2 g++ make
 
 EXPOSE 3000
 ```
+
+## Utilizando o CMD
+
+* Utilizado para executar comando dentro do container no momento for criado
+
+* Diferença do RUN para CMD
+  * RUN é executado quando esta criando a imagem
+  * CMD é executado depois que foi criado a imagem
+
+### Atualizando arquivo Dockerfile
+```
+FROM node:12-alpine
+
+WORKDIR /app
+
+COPY . .
+
+RUN apk add --no-cache python2 g++ make
+
+RUN yarn install --production
+
+CMD [ "node", "src/index.js" ]
+
+EXPOSE 3000
+
