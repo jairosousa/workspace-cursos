@@ -339,3 +339,42 @@ V1: digest: sha256:c314b589692748d9500c14c8eb78bb7baa18ad41c704652d041a11455c4e8
 
 ![Docjer Hub 1](img/docker_1.png)
 ![Docjer Hub 2](img/docker_2.png)
+
+## Salvando e carregando imagens
+
+### Salvando
+```
+> docker image save -o appV1.zip app:v1.0.0
+```
+
+* No diretorio aplicação deverá ser criado arquivo appv1.zip
+
+### Remover
+
+* Antes para garantir remova a imagem original
+
+```
+> docker image rm app:v1.0.0
+```
+
+### Load (Carregar)
+
+```
+>  docker images
+REPOSITORY                   TAG         IMAGE ID       CREATED          SIZE
+jnsousa/app                  V1          9ddae7737e8a   21 minutes ago   399MB
+```
+* Repare não existe mais a imagem app:v1.0.0
+
+```
+> docker image load -i appv1.zip
+Loaded image: app:v1.0.0
+```
+
+```
+> docker images
+REPOSITORY                   TAG         IMAGE ID       CREATED          SIZE
+jnsousa/app                  V1          9ddae7737e8a   25 minutes ago   399MB
+app                          v1.0.0      2183c68204e7   5 hours ago      399MB
+```
+
