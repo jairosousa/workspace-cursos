@@ -5,7 +5,7 @@
 * Escolher a imagem a ser executada a aplicação 'node:12-alpine'
 * Criar o arquivo 'Dockerfile'
 
-## Criando imagem
+### Criando imagem
 
 ```
 > docker build -t app .
@@ -18,7 +18,7 @@ REPOSITORY                   TAG         IMAGE ID       CREATED         SIZE
 app                          latest      f3c43579a64e   4 months ago    91MB
 ```
 
-## Criar Container com a imagem
+### Criar Container com a imagem
 
 ### No modo interativo e com shell
 
@@ -32,7 +32,7 @@ app                          latest      f3c43579a64e   4 months ago    91MB
 bin    dev    etc    home   lib    media  mnt    opt    proc   root   run    sbin   srv    sys    tmp    usr    var
 / #
 ```
-### Verificar se tem node
+### Verificar se tem node instalado
 
 ```
 / # node --version
@@ -46,5 +46,34 @@ v12.22.12
 PS F:\workspace-cursos\docker\Docker_2022\aplicacao\app>
 ```
 
+## Copiando arquivos na Imagem
 
+* Editar o arquivo Docker file
 
+```
+FROM node:12-alpine
+
+WORKDIR /app
+
+COPY . .
+``` 
+
+### Montar novamente a imagem
+
+```
+> docker build -t app .
+/ #
+```
+
+### Criar novamente o container no modo interativo e com shell
+
+```
+> docker run -it app sh
+/app #
+```
+
+```
+/app # ls
+Dockerfile    README.md     package.json  spec          src           yarn.lock
+/app #
+```
