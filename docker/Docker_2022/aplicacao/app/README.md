@@ -258,3 +258,27 @@ CMD [ "node", "src/index.js" ]
 EXPOSE 3000
 ```
  Refaça o processo de criação de imagem e rode o container novamente.
+
+ ## Adicionando tags a imagens
+
+ ```
+  docker images
+REPOSITORY                   TAG         IMAGE ID       CREATED         SIZE
+app                          latest      2183c68204e7   5 hours ago     399MB
+```
+
+* Verificar a tag atual é latest (mais recente) o ruim nessa situação nem sempre é a ataual, sempre bom versionar as images.
+* Se não informar uma tag o docker se encarrega de colocar o latest.
+
+### Renomerar imagem atual
+
+```
+> docker image tag app:latest app:v1.0.0
+```
+```
+2> docker images
+REPOSITORY                   TAG         IMAGE ID       CREATED         SIZE
+app                          latest      2183c68204e7   5 hours ago     399MB
+app                          v1.0.0      2183c68204e7   5 hours ago     399MB
+```
+* Repare aparece as duas imagem mais ela são identicas e tem o mesmo ID.
