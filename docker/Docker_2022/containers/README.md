@@ -62,3 +62,19 @@ Listening on port 3000
 > docker run -d -p host:docker
 > docker run -d -p 80:3000 --name aplicacao2 jnsousa/app:V1
 ```
+
+## Executando comandos em containers
+
+### Verificar o que tem diretorio home
+
+```
+> docker exec aplicacao2 ls
+Dockerfile
+README.md
+img
+node_modules
+package.json
+spec
+src
+yarn.lock
+```
