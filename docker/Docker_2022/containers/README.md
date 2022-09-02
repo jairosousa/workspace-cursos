@@ -78,3 +78,17 @@ spec
 src
 yarn.lock
 ```
+
+## Iniciando e parando containers
+
+### Parando
+```
+> docker stop aplicacao2
+aplicacao2
+```
+
+### Iniciando
+```
+> docker start aplicacao2
+aplicacao2
+```
