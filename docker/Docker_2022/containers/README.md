@@ -189,3 +189,44 @@ docker.txt
 hi docker
 /app/dados #
 ```
+
+## Copiando arquivos do host para o container
+
+### Container para root
+
+* docker cp origem destino
+
+```
+> docker cp aplicacaoNova:/app/teste.txt .
+```
+
+```
+> dir
+
+    Diretório: F:\workspace-cursos\docker\Docker_2022
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        22/08/2022     17:07                aplicacao
+d-----        21/08/2022     12:05                arquivos
+d-----        02/09/2022     15:16                containers
+d-----        21/08/2022     10:15                imagem
+d-----        21/08/2022     10:44                linux
+-a----        21/08/2022     09:32             90 README.md
+-a----        02/09/2022     16:48             10 teste.txt
+```
+
+### Root para Container
+
+```
+> docker cp jairo.txt aplicacaoNova:/app
+```
+
+```
+> /app # ls
+Dockerfile    img           package.json  teste.txt
+README.md     jairo.txt     spec          yarn.lock
+dados         node_modules  src
+/app #  cat jairo.txt
+hi docker
+```
