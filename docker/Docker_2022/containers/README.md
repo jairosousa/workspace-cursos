@@ -53,3 +53,12 @@ Listening on port 3000
 2022-09-02T18:34:43.347974500Z Using sqlite database at /etc/todos/todo.db
 2022-09-02T18:34:43.373542600Z Listening on port 3000
 ```
+
+## Publicando portas de acesso
+
+### Mapeamento da porta
+
+```
+> docker run -d -p host:docker
+> docker run -d -p 80:3000 --name aplicacao2 jnsousa/app:V1
+```
