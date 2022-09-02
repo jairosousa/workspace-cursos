@@ -95,7 +95,7 @@ aplicacao2
 
 ## Removendo containers
 
-## Com container parado
+### Com container parado
 
 ```
 > docker stop 2efb3e
@@ -104,8 +104,88 @@ aplicacao2
 2efb3e
 ````
 
-## Com container funcionando
+### Com container funcionando
 ```
 > docker rm -f c0b6183
 c0b6183
+```
+
+## Volumes persistentes
+
+### Criar volume local
+
+```
+> docker volume create app-dados
+app-dados
+```
+
+### Verificar o conteudo do volume 
+```
+> docker volume inspect app-dados
+[
+    {
+        "CreatedAt": "2022-09-02T19:22:37Z",
+        "Driver": "local",
+        "Labels": {},
+        "Mountpoint": "/var/lib/docker/volumes/app-dados/_data",
+        "Name": "app-dados",
+        "Options": {},
+        "Scope": "local"
+    }
+]
+```
+
+### Associar o volume ao container
+
+```
+> docker run -d -p 3000:3000 --name applicacao3 -v app-dados:/app/dados jnsousa/app:V1
+c6b4cec44cb993db6f8ee75b549753946fc1117fa9e56aaf26acaa3582821058
+```
+
+### Verificar se sub-diretorio 'dados' esta dentro container
+
+```
+> docker exec -it applicacao3 sh
+/app # ls
+Dockerfile    README.md     dados         img           node_modules  package.json  spec          src           yarn.lock
+/app # cd dados/
+/app/dados # ls
+/app/dados #
+```
+
+### Criar arquivo dentro sub-diretorio dados
+
+```
+> echo hi docker > docker.txt
+/app/dados # ls
+docker.txt
+/app/dados # cat docker.txt
+hi docker
+/app/dados #
+```
+
+### Remover o container
+
+```
+> docker rm -f applicacao3
+applicacao3
+```
+
+### Criar novamente 
+
+```
+> docker run -d -p 3000:3000 --name aplicacaoNova -v app-dados:/app/dados jnsousa/app:V1
+65028ece20233f2ee74b88f2a8706f7e9d8f4ca1526b5974dff47c6fcb01a0f6
+```
+
+```
+> docker exec -it aplicacaoNova sh
+/app # ls
+Dockerfile    README.md     dados         img           node_modules  package.json  spec          src           yarn.lock
+/app # cd dados/
+/app/dados # ls
+docker.txt
+/app/dados # cat docker.txt
+hi docker
+/app/dados #
 ```
