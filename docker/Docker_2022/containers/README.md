@@ -92,3 +92,20 @@ aplicacao2
 > docker start aplicacao2
 aplicacao2
 ```
+
+## Removendo containers
+
+## Com container parado
+
+```
+> docker stop 2efb3e
+2efb3e
+> docker rm 2efb3e
+2efb3e
+````
+
+## Com container funcionando
+```
+> docker rm -f c0b6183
+c0b6183
+```
