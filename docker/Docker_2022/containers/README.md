@@ -1,4 +1,4 @@
-# Containrs
+# Containers
 
 > comando remove todas as imagem não utilizadas
 > 
