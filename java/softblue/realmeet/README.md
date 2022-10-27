@@ -52,3 +52,17 @@ Você trabalha na Software2U e foi convocado para desenvolver o mais novo sistem
 ```shell
 docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 ```
+# Link's módulo 2
+[Link #1: Amazon Web Services](https://aws.amazon.com/)
+
+Site do AWS, com link para acesso ao AWS Console.
+
+
+[Link #2: GitHub](https://github.com/)
+
+Serviço de repositórios de código GIT.
+
+
+[Link #3: MapStruct](https://mapstruct.org/)
+
+API para mapeamento de objetos.
