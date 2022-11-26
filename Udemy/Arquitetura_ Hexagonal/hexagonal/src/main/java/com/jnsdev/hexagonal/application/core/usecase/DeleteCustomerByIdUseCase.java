@@ -9,13 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @Autor Jairo Nascimento
  * @Created 26/11/2022 - 16:27
  */
-public class DeleteCustumerByIdUseCase implements DeleteCustomerByIdInputPort {
+public class DeleteCustomerByIdUseCase implements DeleteCustomerByIdInputPort {
 
     private final FindCustomerByIdInputPort findCustomerByIdInputPort;
 
     private final DeleteCustomerByIdOutputPort deleteCustomerByIdOutputPort;
 
-    public DeleteCustumerByIdUseCase(FindCustomerByIdInputPort findCustomerByIdInputPort, DeleteCustomerByIdOutputPort deleteCustomerByIdOutputPort) {
+    public DeleteCustomerByIdUseCase(FindCustomerByIdInputPort findCustomerByIdInputPort, DeleteCustomerByIdOutputPort deleteCustomerByIdOutputPort) {
         this.findCustomerByIdInputPort = findCustomerByIdInputPort;
         this.deleteCustomerByIdOutputPort = deleteCustomerByIdOutputPort;
     }
