@@ -3,7 +3,6 @@ package com.jnsdev.hexagonal.adapters.in.controller;
 import com.jnsdev.hexagonal.adapters.in.controller.mapper.CustomerMapper;
 import com.jnsdev.hexagonal.adapters.in.controller.request.CustomerRequest;
 import com.jnsdev.hexagonal.adapters.in.controller.response.CustomerResponse;
-import com.jnsdev.hexagonal.application.core.domain.Customer;
 import com.jnsdev.hexagonal.application.ports.in.FindCustomerByIdInputPort;
 import com.jnsdev.hexagonal.application.ports.in.InsertCustomerInputPort;
 import org.springframework.beans.factory.annotation.Autowired;
