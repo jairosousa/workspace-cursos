@@ -1,7 +1,6 @@
 package com.jnsdev.hexagonal.adapters.out;
 
 import com.jnsdev.hexagonal.adapters.out.repository.CustomerRepository;
-import com.jnsdev.hexagonal.adapters.out.repository.entity.CustomerEntity;
 import com.jnsdev.hexagonal.adapters.out.repository.mapper.CustomerEntityMapper;
 import com.jnsdev.hexagonal.application.core.domain.Customer;
 import com.jnsdev.hexagonal.application.ports.out.UpdateCustomerOutputPort;
