@@ -7,5 +7,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @Autor Jairo Nascimento
  * @Created 25/11/2022 - 21:28
  */
-public interface CustumerRepository extends MongoRepository<CustomerEntity, String> {
+public interface CustomerRepository extends MongoRepository<CustomerEntity, String> {
 }
