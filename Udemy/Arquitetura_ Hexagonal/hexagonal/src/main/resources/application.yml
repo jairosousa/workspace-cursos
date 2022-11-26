@@ -1,1 +1,4 @@
-
+jnsdev:
+  client:
+    address:
+      url: https://address.mocklab.io/addressess
