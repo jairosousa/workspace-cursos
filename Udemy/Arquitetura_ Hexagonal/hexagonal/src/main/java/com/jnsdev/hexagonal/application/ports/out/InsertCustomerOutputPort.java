@@ -1,6 +1,6 @@
 package com.jnsdev.hexagonal.application.ports.out;
 
-import com.jnsdev.hexagonal.application.core.domain.Custumer;
+import com.jnsdev.hexagonal.application.core.domain.Customer;
 
 /**
  * @Autor Jairo Nascimento
@@ -8,5 +8,5 @@ import com.jnsdev.hexagonal.application.core.domain.Custumer;
  */
 public interface InsertCustomerOutputPort {
 
-    void insert(Custumer custumer);
+    void insert(Customer customer);
 }

@@ -1,6 +1,6 @@
 package com.jnsdev.hexagonal.application.core.usecase;
 
-import com.jnsdev.hexagonal.application.core.domain.Custumer;
+import com.jnsdev.hexagonal.application.core.domain.Customer;
 import com.jnsdev.hexagonal.application.ports.out.FindAddressByZipCodeOutputPort;
 import com.jnsdev.hexagonal.application.ports.out.InsertCustomerOutputPort;
 
@@ -19,9 +19,9 @@ public class InsertCustumerUseCase {
         this.insertCustomerOutputPort = insertCustomerOutputPort;
     }
 
-    public void insert(Custumer custumer, String zipCode) {
+    public void insert(Customer customer, String zipCode) {
         var address = findAddressByZipCodeOutputPort.find(zipCode);
-        custumer.setAddress(address);
-        insertCustomerOutputPort.insert(custumer);
+        customer.setAddress(address);
+        insertCustomerOutputPort.insert(customer);
     }
 }

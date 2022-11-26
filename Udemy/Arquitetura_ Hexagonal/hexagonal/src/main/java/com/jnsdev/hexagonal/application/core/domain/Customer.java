@@ -4,7 +4,7 @@ package com.jnsdev.hexagonal.application.core.domain;
  * @Autor Jairo Nascimento
  * @Created 25/11/2022 - 19:58
  */
-public class Custumer {
+public class Customer {
 
     private String id;
 
@@ -16,7 +16,7 @@ public class Custumer {
 
     private Boolean isValidCpf;
 
-    public Custumer(String id, String name, Address address, String cpf, Boolean isValidCpf) {
+    public Customer(String id, String name, Address address, String cpf, Boolean isValidCpf) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -24,7 +24,7 @@ public class Custumer {
         this.isValidCpf = isValidCpf;
     }
 
-    public Custumer() {
+    public Customer() {
         this.isValidCpf = false;
     }
 
