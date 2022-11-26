@@ -2,3 +2,8 @@ jnsdev:
   client:
     address:
       url: http://address.mocklab.io/addressess
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/hexagonal
