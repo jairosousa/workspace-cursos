@@ -2,6 +2,7 @@ package com.jnsdev.hexagonal.application.core.usecase;
 
 import com.jnsdev.hexagonal.application.core.domain.Customer;
 import com.jnsdev.hexagonal.application.ports.in.FindCustomerByIdInputPort;
+import com.jnsdev.hexagonal.application.ports.in.UpdateCustomerInputPort;
 import com.jnsdev.hexagonal.application.ports.out.FindAddressByZipCodeOutputPort;
 import com.jnsdev.hexagonal.application.ports.out.UpdateCustomerOutputPort;
 
@@ -9,7 +10,7 @@ import com.jnsdev.hexagonal.application.ports.out.UpdateCustomerOutputPort;
  * @Autor Jairo Nascimento
  * @Created 26/11/2022 - 06:33
  */
-public class UpdateCustomerUseCase {
+public class UpdateCustomerUseCase implements UpdateCustomerInputPort {
 
     private final FindCustomerByIdInputPort findCustomerByIdInputPort;
 
@@ -23,6 +24,7 @@ public class UpdateCustomerUseCase {
         this.updateCustomerOutputPort = updateCustomerOutputPort;
     }
 
+    @Override
     public void update(Customer customer, String zipCode) {
         findCustomerByIdInputPort.find(customer.getId());
         var address = findAddressByZipCodeOutputPort.find(zipCode);
