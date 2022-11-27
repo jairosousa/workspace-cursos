@@ -1,9 +1,17 @@
 jnsdev:
   client:
     address:
-      url: http://address.mocklab.io/addressess
+      url: http://address.mocklab.io/addresses
 
 spring:
   data:
     mongodb:
-      uri: mongodb://localhost:27017/hexagonal
+      host: localhost
+      port: 27017
+      authentication-database: admin
+      username: root
+      password: example
+      database: hexagonal
+  cloud:
+    config:
+      enabled: false

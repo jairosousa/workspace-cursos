@@ -1,15 +1,12 @@
 package com.jnsdev.hexagonal.adapters.in.controller.request;
 
-import com.jnsdev.hexagonal.adapters.out.repository.entity.AddressEntity;
-import lombok.Data;
-
 import javax.validation.constraints.NotBlank;
 
 /**
  * @Autor Jairo Nascimento
  * @Created 25/11/2022 - 21:45
  */
-@Data
+
 public class CustomerRequest {
 
     @NotBlank
@@ -20,4 +17,28 @@ public class CustomerRequest {
 
     @NotBlank
     private String zipCode;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
+    }
 }
