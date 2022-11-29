@@ -6,6 +6,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @Autor Jairo Nascimento
@@ -28,7 +29,11 @@ public class UserResource {
 
     @GetMapping("/{id}")
     public User retrievelUser(@PathVariable int id) {
-        return userDaoService.findOne(id);
+        User user = userDaoService.findOne(id);
+
+        if (Objects.isNull(user))
+            throw new UserNotFoundException("id: " + id);
+        return user;
     }
 
     @PostMapping

@@ -36,6 +36,6 @@ public class UserDaoService {
 
     public User findOne(int id) {
         Predicate<? super User> predicate = user -> user.getId().equals(id);
-        return users.stream().filter(predicate).findFirst().orElseThrow(() -> new RuntimeException("User not found"));
+        return users.stream().filter(predicate).findFirst().orElse(null);
     }
 }
