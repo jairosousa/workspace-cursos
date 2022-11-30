@@ -36,6 +36,11 @@ public class UserResource {
         return user;
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable int id) {
+        userDaoService.deleteById(id);
+    }
+
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
         User savedUser = userDaoService.save(user);
