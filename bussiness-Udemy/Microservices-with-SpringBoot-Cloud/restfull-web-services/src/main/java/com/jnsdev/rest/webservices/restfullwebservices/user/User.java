@@ -1,13 +1,16 @@
 package com.jnsdev.rest.webservices.restfullwebservices.user;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * @Autor Jairo Nascimento
@@ -28,6 +31,10 @@ public class User {
     @Past(message = "Birth Date should be in the past")// Data nascimento tem esta sempre no passado
 //    @JsonProperty("birth_date")
     private LocalDate birthDate;
+
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
+    private List<Post> posts;
 
     protected User() {
     }
