@@ -1,12 +1,14 @@
 package com.jnsdev.rest.webservices.restfullwebservices.filtering;
 
+import com.fasterxml.jackson.annotation.JsonFilter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * @Autor Jairo Nascimento
  * @Created 06/12/2022 - 06:53
  */
-@JsonIgnoreProperties({"field1", "field2"})
+//@JsonIgnoreProperties({"field1", "field2"})
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
 
     private String field1;
