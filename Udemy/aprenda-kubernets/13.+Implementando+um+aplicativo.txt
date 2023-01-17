@@ -1,0 +1,16 @@
+https://docs.google.com/presentation/d/1J6oOCpo_CNogzulrari4oeMvidykK11LPfQMGq9T-Y4/edit?usp=sharing
+
+----
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-html
+  labels:
+    app: app-html
+spec:
+  containers:
+  - name: app-html
+    image: httpd:latest
+    ports:
+    - containerPort: 80
