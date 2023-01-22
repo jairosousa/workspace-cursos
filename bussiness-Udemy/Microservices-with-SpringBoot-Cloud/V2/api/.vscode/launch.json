@@ -2,6 +2,18 @@
       "configurations": [
             {
                   "type": "java",
+                  "name": "Launch CurrencyExchangeServiceApplication",
+                  "request": "launch",
+                  "mainClass": "com.jnsdev.microservices.curexservice.CurrencyExchangeServiceApplication"
+            },
+            {
+                  "type": "java",
+                  "name": "Launch CurrencyExchangeServiceApplication",
+                  "request": "launch",
+                  "mainClass": "com.jnsdev.microservices.currencyexchangeservice.CurrencyExchangeServiceApplication"
+            },
+            {
+                  "type": "java",
                   "name": "Spring Boot-LimitsServiceApplication<limits-service>",
                   "request": "launch",
                   "cwd": "${workspaceFolder}",
@@ -17,6 +29,17 @@
                   "cwd": "${workspaceFolder}",
                   "mainClass": "com.jnsdev.microservices.springcloudconfigserver.SpringCloudConfigServerApplication",
                   "projectName": "spring-cloud-config-server",
+                  "args": "",
+                  "envFile": "${workspaceFolder}/.env",
+                  "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=58891 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=spring-cloud-config-server"
+            },
+            {
+                  "type": "java",
+                  "name": "Spring Boot-CurrencyExchangeServiceApplication<currency-exchange-service>",
+                  "request": "launch",
+                  "cwd": "${workspaceFolder}",
+                  "mainClass": "com.jnsdev.microservices.currencyexchangeservice.CurrencyExchangeServiceApplication",
+                  "projectName": "currency-exchange-service",
                   "args": "",
                   "envFile": "${workspaceFolder}/.env"
             }
