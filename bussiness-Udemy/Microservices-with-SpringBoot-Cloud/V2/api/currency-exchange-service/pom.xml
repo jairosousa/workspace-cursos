@@ -72,6 +72,7 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>currency-exchange-service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
