@@ -3,6 +3,7 @@ package com.jnsdev.microservices.currencyexchangeservice.controller;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.retry.annotation.Retry;
 
 import org.slf4j.Logger;
@@ -15,7 +16,8 @@ public class CircuitBreakerController {
 
       private Logger logger = LoggerFactory.getLogger(CircuitBreakerController.class);
 
-      @Retry(name = "sample-api", fallbackMethod = "hardcodeResponse")
+      // @Retry(name = "sample-api", fallbackMethod = "hardcodeResponse")
+      @CircuitBreaker(name = "default", fallbackMethod = "hardcodeResponse")
       @GetMapping(value = "/sample-api")
       public String sampleApi() {
 
