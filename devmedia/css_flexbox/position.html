@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Position</title>
+      <style>
+            * {
+                  margin: 0;
+            }
+
+            .container {
+                  height: 50vh;
+                  padding: 20px;
+                  background-color: black;
+                  position: relative;
+            }
+
+            .box {
+                  width: 300px;
+                  padding: 30px 20px;
+                  color: white;
+                  font-family: Verdana;
+            }
+
+            .box h2,
+            p {
+                  margin-bottom: 15px;
+            }
+
+            .box button {
+                  margin: 0 auto;
+                  padding: 10px;
+                  font-size: 16px;
+                  font-weight: 700;
+                  border: 0;
+                  border-radius: 2px;
+                  box-shadow: 1px 1px 10px 3px black;
+                  cursor: pointer;
+            }
+
+            .card-um {
+                  background: linear-gradient(to left, #b92b27, #1565c0);
+                  position: absolute;
+                  top: 30px;
+            }
+
+            .card-dois {
+                  background: linear-gradient(to right, #1f4037, #99f2c8);
+                  position: absolute;
+                  top: 30px;
+                  left: 400px;
+            }
+
+            .card-tres {
+                  background: linear-gradient(to right, #f12711, #f5af19);
+                  position: absolute;
+                  top: 30px;
+                  right: 20px;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="container">
+            <div class="box card-um">
+                  <h2>Card Um</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit orci fermentum erat varius
+                        luctus. Sed fringilla commodo justo, eu sollicitudin urna dapibus ac.</p>
+                  <button>Leia Mais</button>
+            </div>
+            <div class="box card-dois">
+                  <h2>Card Dois</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit orci fermentum erat varius
+                        luctus. Sed fringilla commodo justo, eu sollicitudin urna dapibus ac.</p>
+                  <button>Leia Mais</button>
+            </div>
+            <div class="box card-tres">
+                  <h2>Card Três</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit orci fermentum erat varius
+                        luctus. Sed fringilla commodo justo, eu sollicitudin urna dapibus ac.</p>
+                  <button>Leia Mais</button>
+            </div>
+      </div>
+</body>
+
+</html>

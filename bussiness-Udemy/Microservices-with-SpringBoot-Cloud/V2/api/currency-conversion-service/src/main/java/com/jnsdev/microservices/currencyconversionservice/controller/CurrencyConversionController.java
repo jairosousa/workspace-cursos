@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,6 +20,9 @@ public class CurrencyConversionController {
       @Autowired
       private CurrencyExchangeProxy proxy;
 
+      @Value("${currency.exchange.uri}")
+      private String currency_exchange_uri;
+
       @GetMapping("/currency-conversion/from/{from}/to/{to}/quantity/{quantity}")
       public CurrencyConversion calculatorCurrencyConversion(
                   @PathVariable String from,
@@ -29,8 +33,10 @@ public class CurrencyConversionController {
             uriVariables.put("from", from);
             uriVariables.put("to", to);
 
+            String url = currency_exchange_uri + "from/{from}/to/{to}";
+
             ResponseEntity<CurrencyConversion> responseEntity = new RestTemplate().getForEntity(
-                        "http://localhost:8000/currency-exchange/from/{from}/to/{to}", CurrencyConversion.class,
+                        url, CurrencyConversion.class,
                         uriVariables);
 
             CurrencyConversion currencyConversion = responseEntity.getBody();

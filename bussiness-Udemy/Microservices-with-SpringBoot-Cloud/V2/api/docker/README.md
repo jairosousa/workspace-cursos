@@ -3,13 +3,13 @@
 ## Images
 - https://hub.docker.com/u/in28min
 - Currency Exchange Service
-  - in28min/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
+  - jnsousa/mmv2-currency-exchange-service:0.0.1-SNAPSHOT
 - Currency Conversion Service
-  - in28min/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
+  - jnsousa/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
 - Eureka
-  - in28min/mmv2-naming-server:0.0.1-SNAPSHOT
+  - jnsousa/mmv2-naming-server:0.0.1-SNAPSHOT
 - API GATEWAY
-  - in28min/mmv2-api-gateway:0.0.1-SNAPSHOT
+  - jnsousa/mmv2-api-gateway:0.0.1-SNAPSHOT
   - 
 #3 URLS
 
@@ -42,4 +42,10 @@ docker push in28min/mmv2-naming-server:0.0.1-SNAPSHOT
 docker push in28min/mmv2-currency-conversion-service:0.0.1-SNAPSHOT
 docker push in28min/mmv2-api-gateway:0.0.1-SNAPSHOT
 watch -n 0.1 curl http://localhost:8000/sample-api
+
+```
+
+Gerar imagem plugin spring-boot
+```
+mvn spring-boot:build-image -DskipTes
 ```
