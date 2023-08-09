@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>align-items</title>
+
+      <style>
+            .secao-produtos {
+                  height: 350px;
+                  background-color: black;
+                  display: flex;
+                  /* align-items: flex-start; */
+                  /* align-items: center; */
+                  /* align-items: flex-end; */
+                  /* flex-direction: column; */
+                  align-items: center;
+                  justify-content: space-evenly;
+                  flex-direction: row-reverse;
+            }
+
+            .card-produto {
+                  width: 200px;
+                  height: 200px;
+                  background-color: white;
+                  border: 1px solid gray;
+            }
+
+            .container-column-flex-start {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+            }
+
+            .container-column-center {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+            }
+
+            .container-column-flex-end {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-end;
+            }
+
+            .container-stretch-center {
+                  display: flex;
+                  align-items: stretch;
+                  justify-content: center;
+            }
+
+            .container-center-center {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+            }
+
+            .container-center-space-between {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+            }
+
+            .container-center-space-around {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-around;
+            }
+
+            .container-center-space-evenly {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-evenly;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="secao-produtos">
+            <div class="card-produto">Imagem Produto 1</div>
+            <div class="card-produto">Imagem Produto 2</div>
+            <div class="card-produto">Imagem Produto 3</div>
+      </div>
+</body>
+
+</html>

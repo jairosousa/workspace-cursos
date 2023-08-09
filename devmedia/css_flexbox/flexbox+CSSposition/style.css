@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+      color: white;
+}
+
+.container-rodape {
+      padding: 30px 20px;
+      background-color: black;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+}
+
+.container-imagem {
+      width: 100px;
+}
+
+.container-imagem img {
+      width: 100%;
+      height: 100%;
+}
+
+.container-contato {
+      width: 100%;
+      max-width: 1024px;
+
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 20px;
+}
+
+.container-contato div {
+      padding: 10px 0;
+      border: 1px solid gray;
+      border-radius: 4px;
+      text-align: center;
+
+      flex: 1 1 240px;
+}
+
+.container-descricao {
+      width: 100%;
+      max-width: 1024px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+}
+
+.container-descricao a {
+      width: 40px;
+      height: 40px;
+      background-image: url("./img/seta-para-cima.png");
+      background-position: center;
+      background-size: cover;
+      background-color: #dddddd;
+      border-radius: 4px;
+      position: absolute;
+      bottom: 60px;
+      right: 0px;
+}
+
+.container-redes-sociais img {
+      width: 30px;
+      margin-right: 5px;
+}

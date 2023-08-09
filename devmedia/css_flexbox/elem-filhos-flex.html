@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Elementos filhos - flex</title>
+      <style>
+            .container {
+                  padding: 60px 30px;
+                  background-color: black;
+                  display: flex;
+                  /* flex-wrap: wrap; */
+                  gap: 10px;
+            }
+
+            /* .card {
+                  height: 200px;
+                  padding: 10px 20px;
+                  background-color: white;
+                  border-radius: 10px;
+                  flex-grow: 1;
+                  flex-shrink: 1;
+                  flex-basis: auto;
+            } */
+
+            .card {
+                  height: 200px;
+                  padding: 10px 20px;
+                  background-color: white;
+                  border-radius: 10px;
+                  flex: 1 1 auto;
+            }
+      </style>
+</head>
+
+<body>
+      <h1>flex</h1>
+      <p>A propriedade flex é uma abreviação das propriedades: flex-grow, flex-shrink e flex-basis. </p>
+
+      <p>flex: | valor do flex-glow | | valor do flex-shrink | | valor flex-basis |</p>
+      <p>flex: 1 1 200px;</p>
+      <div class="container">
+            <div class="card">Imagem Card 1</div>
+            <div class="card">Imagem Card 2</div>
+            <div class="card">Imagem Card 3</div>
+            <!-- <div class="card">Imagem Card 4</div>
+            <div class="card">Imagem Card 5</div>
+            <div class="card">Imagem Card 6</div> -->
+
+      </div>
+</body>
+
+</html>

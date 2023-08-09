@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Elementos filhos - basic</title>
+      <style>
+            .container {
+                  padding: 60px 30px;
+                  background-color: black;
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 10px;
+            }
+
+            .card {
+                  height: 200px;
+                  padding: 10px 20px;
+                  background-color: white;
+                  border-radius: 10px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  flex-basis: 200px;
+            }
+      </style>
+</head>
+
+<body>
+      <h1>flex-basis</h1>
+      <p>Essa propriedade indica uma largura ou uma altura inicial para um elemento filho (o card), conforme o
+            alinhamento do container. </p>
+      <div class="container">
+            <div class="card">Imagem Card 1</div>
+            <div class="card">Imagem Card 2</div>
+            <div class="card">Imagem Card 3</div>
+            <div class="card">Imagem Card 4</div>
+            <div class="card">Imagem Card 5</div>
+            <div class="card">Imagem Card 6</div>
+
+      </div>
+</body>
+
+</html>

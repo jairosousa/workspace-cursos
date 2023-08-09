@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Flex</title>
+
+      <style>
+            .container {
+                  width: 200px;
+                  height: 200px;
+                  /* padding: 40px 20px 20px; */
+                  border: 1px solid gray;
+                  /*background-color: black*/;
+                  display: flex;
+                  /* flex-wrap: wrap; */
+                  /*quebra linha */
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: space-between;
+            }
+
+            .box1,
+            .box2,
+            .box3 {
+                  /* width: 200px; */
+                  /* height: 200px; */
+                  background-color: white;
+                  border: 1px solid gray;
+            }
+
+            .container-quebra-de-linha {
+                  display: flex;
+                  flex-wrap: wrap;
+            }
+
+            .container-quebra-de-linha-reversa {
+                  display: flex;
+                  flex-wrap: wrap-reverse;
+            }
+
+            .container-em-linha-sem-quebra-de-linha {
+                  display: flex;
+                  flex-flow: row nowrap;
+            }
+
+            .container-em-linha-com-quebra-de-linha {
+                  display: flex;
+                  flex-flow: row wrap;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="container">
+            <div class="box1">Imagem Produto 1</div>
+            <div class="box2">Imagem Produto 2</div>
+            <div class="box3">Imagem Produto 3</div>
+      </div>
+</body>
+
+</html>

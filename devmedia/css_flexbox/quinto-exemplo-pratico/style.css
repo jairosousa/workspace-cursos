@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+      padding: 0;
+      margin: 0;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      color: white;
+}
+
+.container {
+      padding: 100px 20px;
+      background-image: url(img/imagem-de-fundo.png);
+      background-position: center;
+      background-size: cover;
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.container h2 {
+      margin-bottom: 30px;
+}
+
+.lista-horarios {
+      width: 100%;
+      max-width: 768px;
+}
+
+.lista-horarios li {
+      list-style: none;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+}
+
+.lista-horarios li div {
+      height: 1px;
+      background-color: gray;
+      flex: 1 1 auto;
+}
+
+.lista-horarios li h3 {
+      flex: 0 1 70px;
+}
+
+.lista-horarios li span,
+p {
+      flex: 0 1 90px;
+      text-align: right;
+}
+
+.lista-horarios li span {
+      color: #c4a47c;
+}
